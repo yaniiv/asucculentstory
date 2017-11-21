@@ -9,14 +9,47 @@ module.exports = {
         path.join(parentDir, 'index.js')
     ],
     module: {
-        loaders: [{
-            test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },{
-                test: /\.less$/,
-                loaders: ["style-loader", "css-loder", "less-loader"]
-            }
+        loaders: [
+          {
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'eslint-loader'
+            options: {
+              sourceMaps: 'both',
+            },
+          },
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loaders: ['babel-loader', 'eslint-loader']
+            options: {
+              sourceMaps: 'both',
+            },
+          },
+          {
+            test: /\.css$/,
+            use: [
+              'style-loader',
+              'css-loader',
+            ],
+          },
+          {
+            test: /\.scss$/,
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true,
+                },
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: true,
+                },
+              },
+            ],
+          }
         ]
     },
     output: {
@@ -24,6 +57,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
+        port: 1212,
         contentBase: parentDir,
         historyApiFallback: true
     }

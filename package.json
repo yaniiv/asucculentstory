@@ -16,6 +16,10 @@
     "url": "https://github.com/yantonsoup/asucculentstory/issues"
   },
   "homepage": "https://github.com/yantonsoup/asucculentstory#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js"
+  },
   "dependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

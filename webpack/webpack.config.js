@@ -1,59 +1,23 @@
-
-var webpack = require('webpack');
-var path = require('path');
-
-var parentDir = path.join(__dirname, '../');
+const webpack = require('webpack');
+const path = require('path');
+const loaders = require('./loaders')
+const parentDir = path.join(__dirname, '../');
 
 module.exports = {
-    entry: [
-        path.join(parentDir, 'index.js')
-    ],
+    entry: path.join(__dirname, '../index.js'),
     module: {
-        loaders: [
-          {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'eslint-loader'
-            options: {
-              sourceMaps: 'both',
-            },
-          },
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loaders: ['babel-loader', 'eslint-loader']
-            options: {
-              sourceMaps: 'both',
-            },
-          },
-          {
-            test: /\.css$/,
-            use: [
-              'style-loader',
-              'css-loader',
-            ],
-          },
-          {
-            test: /\.scss$/,
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  sourceMap: true,
-                },
-              },
-              {
-                loader: 'sass-loader',
-                options: {
-                  sourceMap: true,
-                },
-              },
-            ],
-          }
-        ]
+      noParse: /node_modules\/reactstrap-tether\/dist\/js\/tether.js/,
+      rules: [
+        loaders.css,
+        loaders.eslint,
+        loaders.image,
+        loaders.font,
+        loaders.js,
+        loaders.scss,
+      ],
     },
     output: {
-        path: parentDir + '/dist',
+        path: path.join(__dirname, '../dist'),
         filename: 'bundle.js'
     },
     devServer: {

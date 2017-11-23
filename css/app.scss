@@ -1,14 +1,4 @@
 @import
   // Core variables, functions and mixins
-'./variables';
-
-html,
-body {
-  background-color: $mistyrose;
-}
-//
-// .main {
-//   background-color: #fff;
-//   height: 100px;
-//   width: 100px;
-// }
+'./variables',
+'./reboot';

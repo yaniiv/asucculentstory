@@ -1,4 +1,5 @@
 import React from 'react'
+import SVG from 'react-inlinesvg'
 import { Container, Row, Col } from 'reactstrap'
 import Navbar from '../components/Nav'
 
@@ -15,7 +16,11 @@ const App = () => (
         </Col>
       </Row>
       <Row>
-        <Col sm={{ size: 4, offset: 4 }}>Centered SVG</Col>
+        <Col sm={{ size: 4, offset: 4 }}>
+          <SVG
+            src="../../svg/plant.svg"
+          />
+        </Col>
       </Row>
     </Container>
   </div>

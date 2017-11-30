@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 exports.eslint = {
   test: /\.jsx?$/,
   enforce: 'pre',
@@ -19,32 +21,33 @@ exports.css = {
 
 exports.scss = {
   test: /\.scss$/,
-  use: [
-    {
-      loader: 'css-loader',
-      options: {
-        sourceMap: true,
+  use: ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: [
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+        },
       },
-    },
-    {
-      loader: 'sass-loader',
-      options: {
-        sourceMap: true,
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+        },
       },
-    },
-  ],
-}
-
-const jsloaders = {
-  loader: 'babel-loader',
-  options: {
-    sourceMaps: 'both',
-  },
+    ],
+  }),
 }
 
 exports.js = {
   test: /\.jsx?$/,
-  use: [jsloaders],
+  use: [{
+    loader: 'babel-loader',
+    options: {
+      sourceMaps: 'both',
+    },
+  }],
   exclude: /node_modules/,
 }
 

@@ -11,7 +11,7 @@ body {
 }
 
 .color-block {
-  height:120vh;
+  height:170vh;
 }
 
 .svg-container {
@@ -40,6 +40,19 @@ body {
 
 .block-5 {
   background-color: #cfe0f5;
+}
+
+.block-6 {
+  background-color: #e4d2f5;
+}
+
+.block-7 {
+  background-color: #f3eaaa;
+}
+
+footer {
+  background-color: $gray;
+  height:40vh;
 }
 
 .plant-svg {

@@ -17,7 +17,7 @@ const App = () => (
     </Row>
     <div className="svg-container">
       <Row>
-        <Col sm={{ size: 4, offset: 4 }}>
+        <Col xs={{ size: 4, offset: 4 }}>
           <SVG
             src="../../svg/plant.svg"
           />
@@ -29,6 +29,12 @@ const App = () => (
     <Section index={3} />
     <Section index={4} />
     <Section index={5} />
+    <Section index={6} />
+    <Section index={7} />
+    <footer>
+      footer goes here
+    </footer>
+
 
   </div>
 )

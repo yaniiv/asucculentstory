@@ -9,6 +9,7 @@
   "rules": {
     "max-len": [1, 120, 2, {ignoreComments: true}],
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react/prop-types": 0,
     "semi": [2, "never"],
   },
 }

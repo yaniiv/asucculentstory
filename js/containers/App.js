@@ -1,20 +1,21 @@
 import React from 'react'
 import SVG from 'react-inlinesvg'
-import { Container, Row, Col } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 import Navbar from '../components/Nav'
+import Section from './Section'
 
 const App = () => (
   <div>
     <Navbar />
-    <Container>
-      <Row>
-        <Col
-          className="text-center"
-          sm={{ size: 4, offset: 4 }}
-        >
-          Centered Title
-        </Col>
-      </Row>
+    <Row>
+      <Col
+        className="text-center"
+        sm={{ size: 4, offset: 4 }}
+      >
+        Centered Title
+      </Col>
+    </Row>
+    <div className="svg-container">
       <Row>
         <Col sm={{ size: 4, offset: 4 }}>
           <SVG
@@ -22,7 +23,13 @@ const App = () => (
           />
         </Col>
       </Row>
-    </Container>
+    </div>
+    <Section index={1} />
+    <Section index={2} />
+    <Section index={3} />
+    <Section index={4} />
+    <Section index={5} />
+
   </div>
 )
 

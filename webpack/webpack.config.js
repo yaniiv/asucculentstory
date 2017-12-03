@@ -15,22 +15,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [{
-          loader: 'style-loader',
-        }, {
-          loader: 'css-loader',
-        }, {
-          loader: 'sass-loader',
-        }],
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.jsx?$/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            sourceMaps: 'both',
-          },
-        }],
+        use: ['babel-loader'],
         exclude: /node_modules/,
       },
     ],

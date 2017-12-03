@@ -19,6 +19,7 @@ const App = () => (
       <Row>
         <Col xs={{ size: 4, offset: 4 }}>
           <SVG
+            className="plant-svg"
             src="../../svg/plant.svg"
           />
         </Col>

@@ -10,6 +10,13 @@ body {
   background-color: $mistyrose;
 }
 
+
+.plant-svg {
+  height: 30vh;
+  margin-top: 10vh;
+  position: fixed;
+}
+
 .color-block {
   height:170vh;
 }
@@ -55,19 +62,17 @@ footer {
   height:40vh;
 }
 
-.plant-svg {
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
+//
+// animation-duration: 2s;
+// animation-name: slidein;
+// @keyframes slidein {
+//   from {
+//     margin-left: 100%;
+//     width: 300%;
+//   }
+//
+//   to {
+//     margin-left: 0%;
+//     width: 100%;
+//   }
+// }

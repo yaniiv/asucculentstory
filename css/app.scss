@@ -17,8 +17,8 @@ body {
 .plant-svg {
   // max-width: 30vh;
   width: 65vw;
-  padding-left: 35vw;
-  padding-top: 20vw;
+  padding-left: 33vw;
+  padding-top: 17vh;
 
   // display: block;
   // margin: auto;
@@ -33,21 +33,22 @@ body {
 }
 
 .svg-container {
-  height:100vh;
 }
 
 .block-1 {
-  background-color: $lightpink;
+  height:300vh;
+  background-color: $mistyrose;
 }
 
 .block-2 {
-  background-color: #f0dcab;
-
+  background-color: $lightpink;
 }
 
 
 .block-3 {
-  background-color: #f0f5d7;
+  background-color: #f0dcab;
+
+  // background-color: #f0f5d7;
 
 }
 
@@ -73,17 +74,19 @@ footer {
   height:40vh;
 }
 
-//
-// animation-duration: 2s;
-// animation-name: slidein;
-// @keyframes slidein {
-//   from {
-//     margin-left: 100%;
-//     width: 300%;
-//   }
-//
-//   to {
-//     margin-left: 0%;
-//     width: 100%;
-//   }
-// }
+.animated {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

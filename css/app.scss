@@ -10,10 +10,21 @@ body {
   background-color: $mistyrose;
 }
 
+.svg-container {
+
+}
 
 .plant-svg {
-  height: 30vh;
-  margin-top: 10vh;
+  // max-width: 30vh;
+  width: 65vw;
+  padding-left: 35vw;
+  padding-top: 20vw;
+
+  // display: block;
+  // margin: auto;
+  z-index: 100;
+  display: block;
+  margin: 0 auto;
   position: fixed;
 }
 

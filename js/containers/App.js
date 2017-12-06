@@ -7,6 +7,11 @@ import Section from './Section'
 const App = () => (
   <div>
     <Navbar />
+    <div className="svg-container">
+      <SVG
+        src="../../svg/plant.svg"
+      />
+    </div>
     <Row>
       <Col
         className="text-center"
@@ -15,16 +20,11 @@ const App = () => (
         Centered Title
       </Col>
     </Row>
-    <div className="svg-container">
-      <Row>
-        <Col xs={{ size: 4, offset: 4 }}>
-          <SVG
-            className="plant-svg"
-            src="../../svg/plant.svg"
-          />
-        </Col>
-      </Row>
-    </div>
+    <Row>
+      <Col xs={{ size: 4, offset: 4 }}>
+        hi
+      </Col>
+    </Row>
     <Section index={1} />
     <Section index={2} />
     <Section index={3} />
